@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import CheckIcon from "../icons/CheckIcon";
+import Link from "next/link;
 
 interface PricingFeature {
   feature: string;
@@ -76,7 +75,6 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <div className="space-y-3 pt-4">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center gap-2">
-              <CheckIcon className="w-5 h-5 text-emerald-400" />
               <span className="text-sm text-gray-200">{feature.feature}</span>
             </div>
           ))}
