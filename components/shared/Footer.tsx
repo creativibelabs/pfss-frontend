@@ -10,7 +10,7 @@ import {
 import Button from "./Button";
 import Mail from "../icons/Mail";
 
-const Footer = ({ locale }: { locale: string }) => {
+export default function Footer() {
   return (
     <footer className="relative bottom-0 left-0 right-0 z-50 container mx-auto py-10 bg-transparent">
       <section
@@ -21,7 +21,7 @@ const Footer = ({ locale }: { locale: string }) => {
           <section>
             {/* Logo */}
             <Link
-              href={`/${locale}`}
+              href={`/`}
               className="bg-emerald-400/90 text-white px-15 py-4 rounded-xl text-sm shadow-2xl md:text-left text-center block w-fit md:mx-0 mx-auto"
             >
               logo
@@ -145,5 +145,3 @@ const Footer = ({ locale }: { locale: string }) => {
     </footer>
   );
 };
-
-export default Footer;
