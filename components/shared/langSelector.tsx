@@ -14,10 +14,8 @@ const languages = [
   { code: "ja", name: "Japanese", flag: JA },
 ];
 
-export default function LanguageSelector({ locale }: { locale: string }) {
-  const [selected, setSelected] = useState(
-    languages.find((lang) => lang.code === locale) || languages[0]
-  );
+export default function LanguageSelector() {
+  const [selected, setSelected] = useState(languages[0]);
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
