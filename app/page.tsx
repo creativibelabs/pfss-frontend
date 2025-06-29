@@ -48,15 +48,15 @@ export default async function LandingPage() {
         <Header />
 
         {/* {Hero Section} */}
-        <section className="min-h-[650px] bg-center flex md:pt-0 pt-30 md:items-center justify-center" >
+        <section className="relative min-h-[650px] bg-center flex md:pt-0 pt-30 md:items-center justify-center" >
             {/* Floating Images */}
-            <div className="absolute md:top-30 top-[560px] left-50  md:left-30 z-10">
+            <div className="site_banner_img_left">
                 <Image
                     src="/images/storage.png"
                     alt="Storage"
-                    width={200}
+                    width={250}
                     height={170}
-                    className="rotate-[8deg]"
+                    className="rotate-[0deg]"
                 />
             </div>
             <div className="absolute bottom-30 right-40 z-10">
@@ -71,7 +71,7 @@ export default async function LandingPage() {
 
             {/* Main Content */}
             <div className="relative z-20 text-white text-center px-6 max-w-5xl w-full">
-                <h1 className="text-4xl md:text-[82px] font-[800] mb-6 leading-tight">
+                <h1 className="site_banner_title text-4xl md:text-[82px] font-[700] mb-6 leading-tight"> 
                     Your Private Cloud.<br />
                     <span className="text-4xl md:text-[82px] font-extrabold mb-6 leading-tight">Secure, Simple, Yours.</span>
                 </h1>
@@ -80,12 +80,13 @@ export default async function LandingPage() {
                 <div className="text-lg  md:text-xl mb-10 ">
                     {/* Subtitle 1 */}
                     <div className="flex justify-center items-center gap-3 flex-wrap">
-                        <span className="text-sm md:text-3xl">Upload, Share, And Manage Your Files</span>
+                        <span className="text-sm md:text-3xl">Securely upload, share, and manage your files</span>
                         <div
                             className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
                             style={{ backgroundImage: "url('/images/icons/frame.png')" }}
                         >
                             <Image src="/images/icons/file.png" alt="File Icon" width={24} height={24} />
+                            <span className="text-sm md:text-3xl">with</span>
                         </div>
                     </div>
 
@@ -97,7 +98,7 @@ export default async function LandingPage() {
                         >
                             <Image src="/images/icons/lock.png" alt="Lock Icon" width={60} height={60} />
                         </div>
-                        <span className="text-sm md:text-2xl ">With Full Privacy And Zero Compromises.</span>
+                        <span className="text-sm md:text-2xl ">No privacy compromise and seamless sync to your preferred device.</span>
                     </div>
                 </div>
 

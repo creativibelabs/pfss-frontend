@@ -14,10 +14,10 @@ export default function Header() {
     const isActive = useIsActive();
 
     return (
-        <header className="top-0 left-0 right-0 z-40 bg-transparent pt-2 sm:pt-3">
+        <header className="top-0 left-0 right-0 z-40 bg-transparent pt-2 sm:pt-5">
         <div className="w-full">
             <div className="flex justify-between items-center h-14 sm:h-16 mx-auto gap-2">
-                <div className="flex-shrink-0">
+                <div className="site_logo">
                     <Link
                         href={`/`}
                         className="bg-emerald-400/90 text-white px-4 sm:px-6 lg:px-8 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium text-sm sm:text-base transition-all duration-200 hover:bg-emerald-500/90"
@@ -27,18 +27,18 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Navigation - Hidden on mobile and tablet */}
-                <nav className="hidden lg:block w-full">
-                    <div className="rounded-xl border border-emerald-700 w-full" style={{ backgroundImage: "url('/images/noise-texture.png')" }}>
-                    <ul className="flex items-center bg-no-repeat bg-cover justify-center bg-gradient-to-b from-emerald-600/30 to-emerald-900/40 rounded-xl backdrop-filter backdrop-blur-md hover:backdrop-blur">
+                <nav className="site_navbar_wrap hidden lg:block w-full">
+                    <div className="site_navbar w-full" >
+                    <ul className="site_navbar_ul flex justify-between items-center">
                         {navList.map((nav, index) => (
                         <li key={index}>
                             <Link
                             href={`/${nav.path}`}
-                            className={`transition-colors text-sm font-medium px-8 lg:px-10 xl:px-12 py-2.5 inline-block hover:text-white ${
+                            className={` ${
                                 isActive(nav.path)
-                                ? " border border-emerald-400/20 bg-emerald-900/50 m-1"
-                                : "text-gray-200 hover:border hover:border-emerald-400/20 "
-                            } rounded-xl`}
+                                ? " site_active_link "
+                                : " "
+                            } `}
                             >
                             {nav.title}
                             </Link>
@@ -71,15 +71,15 @@ export default function Header() {
                 </nav>
 
                 {/* Right section - Desktop and Tablet */}
-                <div className="hidden sm:flex items-center space-x-2 lg:space-x-3">
+                <div className="site_lang_login">
                     <LanguageSelector />
                     <Link
                         style={{ backgroundImage: "url('/images/button-background.png')" }}
                         href={`/sign-in`}
-                        className={`flex items-center justify-center px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium rounded-lg lg:rounded-xl border ${
+                        className={`site_login_btn flex items-center justify-center px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium rounded-lg lg:rounded-xl border ${
                             pathname.includes("/Auth/User_login")
-                            ? "text-white bg-gradient-to-r from-emerald-500 to-emerald-700"
-                            : "text-white border-emerald-500 bg-gradient-to-b from-emerald-600/60 to-emerald-900/40"
+                            ? "text-white "
+                            : "text-white "
                         } backdrop-blur-lg hover:to-emerald-500/50 transition-all duration-300 shadow-sm`}
                         >
                         Login

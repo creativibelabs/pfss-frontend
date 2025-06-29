@@ -9,7 +9,7 @@ import ZH from "@/public/images/zh.png";
 import JA from "@/public/images/ja.png";
 
 const languages = [
-  { code: "en", name: "English", flag: UK },
+  { code: "en", name: "Eng", flag: UK },
   { code: "zh", name: "Chinese", flag: ZH },
   { code: "ja", name: "Japanese", flag: JA },
 ];
@@ -36,10 +36,10 @@ export default function LanguageSelector() {
     <div className="relative w-full max-w-xs" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-3 rounded-xl border border-emerald-500 bg-green-900/40 px-4 py-2.5 text-sm text-white shadow-md hover:shadow-lg transition-all"
-        style={{ backgroundImage: "url('/images/noise-texture.png')" }}
+        className="site_lang_switcher w-full flex items-center justify-between gap-3  px-4 py-2.5 text-sm text-white"
+        style={{ backgroundImage: "url('/images/noise-texture.png0')" }}
       >
-        <div className="flex items-center gap-3">
+        <div className="site_lang_selected flex items-center gap-3">
           <Image
             src={selected.flag}
             alt={`${selected.name} flag`}
