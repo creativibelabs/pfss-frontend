@@ -1,103 +1,259 @@
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import Image from "next/image";
+import Button from "@/components/shared/Button";
+import StepsCard from "@/components/Home/StepsCard";
+import Testimonials from "@/components/Home/Testimonials";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+interface FeatureIconProps {
+  imageSrc: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  customClass?: string; // NEW prop
+}
+
+export default async function LandingPage() {
+
+  const FeatureIcon: React.FC<FeatureIconProps> = ({
+    imageSrc,
+    top,
+    left,
+    right,
+    bottom,
+    customClass,
+  }) => {
+    return (
+      <div
+        className={`absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:scale-110 ${
+          customClass ?? ""
+        }`}
+        style={{ top, left, right, bottom }}
+      >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={imageSrc}
+          alt="Feature icon"
+          width={100}
+          height={100}
+          className="rounded-full"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
+    );
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <main style={{ backgroundImage: "url('/images/home-background.webp')" }} className="main-wrapper">
+      <div className="wrapper">
+        <Header />
+
+        {/* {Hero Section} */}
+        <section className="min-h-[650px] bg-center flex md:pt-0 pt-30 md:items-center justify-center" >
+            {/* Floating Images */}
+            <div className="absolute md:top-30 top-[560px] left-50  md:left-30 z-10">
+                <Image
+                    src="/images/storage.png"
+                    alt="Storage"
+                    width={200}
+                    height={170}
+                    className="rotate-[8deg]"
+                />
+            </div>
+            <div className="absolute bottom-30 right-40 z-10">
+                <Image
+                    src="/images/usage.png"
+                    alt="Usage"
+                    width={180}
+                    height={180}
+                    className="-rotate-[6deg]  md:block"
+                />
+            </div>
+
+            {/* Main Content */}
+            <div className="relative z-20 text-white text-center px-6 max-w-5xl w-full">
+                <h1 className="text-4xl md:text-[82px] font-[800] mb-6 leading-tight">
+                    Your Private Cloud.<br />
+                    <span className="text-4xl md:text-[82px] font-extrabold mb-6 leading-tight">Secure, Simple, Yours.</span>
+                </h1>
+
+                {/* Subtitles with Framed Icons */}
+                <div className="text-lg  md:text-xl mb-10 ">
+                    {/* Subtitle 1 */}
+                    <div className="flex justify-center items-center gap-3 flex-wrap">
+                        <span className="text-sm md:text-3xl">Upload, Share, And Manage Your Files</span>
+                        <div
+                            className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
+                            style={{ backgroundImage: "url('/images/icons/frame.png')" }}
+                        >
+                            <Image src="/images/icons/file.png" alt="File Icon" width={24} height={24} />
+                        </div>
+                    </div>
+
+                    {/* Subtitle 2 */}
+                    <div className="flex justify-center items-center flex-wrap">
+                        <div
+                            className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
+                            style={{ backgroundImage: "url('/images/icons/frame.png')" }}
+                        >
+                            <Image src="/images/icons/lock.png" alt="Lock Icon" width={60} height={60} />
+                        </div>
+                        <span className="text-sm md:text-2xl ">With Full Privacy And Zero Compromises.</span>
+                    </div>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex justify-center gap-4 flex-wrap">
+                    <Button text="Start for free" />
+                    <Button text="Explore premium features" />                    
+                </div>
+            </div>
+        </section>
+        {/* {Hero Section End} */}
+
+        {/* {Features Section Start} */}
+        <section className=" px-4 text-white relative min-h-[400px] max-h-[650px] mt-40 md:mt-0">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-[64px] lg:text-[64px] font-bold w-full md:max-w-150 mx-auto">
+              Powerful Features At Your Fingertips.
+            </h2>
+          </div>
+          <div className="relative mx-auto w-full max-w-3xl aspect-square">
+            <div className="relative w-full h-full">
+              <div className="absolute inset-0">
+                <Image
+                  src="/images/feature/circle-large.png"
+                  alt="Large circle"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+    
+              <div className="absolute  inset-[19%]">
+                <Image
+                  src="/images/feature/circle-medium.png"
+                  alt="Medium circle"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="absolute md:top-95 top-40 inset-[30%]">
+                <Image
+                  src="/images/feature/circle-small.png"
+                  alt="Small circle"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+    
+              {/* Features positioned correctly */}
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon1.png"
+                top="23%"
+                left="55%"
+                customClass="feature-icon"
+              />
+    
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon2.png"
+                top="50%"
+                right="-5%"
+                customClass="feature-icon"
+              />
+    
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon3.png"
+                bottom="32%"
+                right="50%"
+                customClass="feature-icon"
+              />
+    
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon4.png"
+                bottom="45%"
+                right="17%"
+                customClass="feature-icon"
+              />
+    
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon5.png"
+                top="38%"
+                left="35%"
+                customClass="feature-icon"
+              />
+    
+              <FeatureIcon
+                imageSrc="/images/feature/FeatureIcon6.png"
+                top="50%"
+                left="7%"
+                customClass="feature-icon"
+              />
+            </div>
+          </div>
+        </section>
+        {/* {Features Section End} */}
+
+        {/* {Get Started, Testimonials Section Start} */}
+        <section className="relative py-10 overflow-hidden">
+          <div className="relative z-10 container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h3 className="text-3xl md:text-[64px] font-bold md:mb-3 text-white">
+                Get Started in Minutes
+              </h3>
+              <p className="text-md md:text-[30px] font-[400] text-gray-200">
+                <span className="block md:inline">Secure your data in minutes with seamless upload,</span>{" "}
+                <span className="block">-management, and instant access.</span>
+              </p>
+            </div>
+            <StepsCard />
+          </div>
+          <div className="relative z-10 container mx-auto px-4 md:px-6 mt-20 md:mt-40">
+            <div className="text-center max-w-5xl mx-auto md:mt-16 mt-4">
+              <h3 className="text-3xl md:text-[64px] font-bold mb-2 mt-10 text-white">
+                See Why Users Choose Us
+              </h3>
+              <p className="text-lg md:text-[30px] font-[400] text-gray-200 w-full mx-auto">
+                Hear from individuals and teams who trust us to protect what matters most.
+              </p>
+            </div>
+            <Testimonials />
+          </div>
+        </section>
+        {/* {Get Started, Testimonials Section End} */}
+
+        {/* {Free Version Start} */}
+        <section className='bg-no-repeat bg-center mb-15'>
+            <div className="p-7 md:p-8 rounded-xl shadow-2xl bg-emerald-600/10 border border-emerald-500/70 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 relative overflow-hidden" style={{ backgroundImage: "url('/images/noise-texture.png')" }}>
+                <div className="space-y-5">
+                    <div>
+                        <h2 className="text-4xl md:text-[50px] font-[800] mb-4">Love the free version?</h2>
+                        <p className="text-[20px] font-[400] md:mb-10 mb-7">You'll love Premium even more. More features. More freedom.</p>
+                        <Button text='See What Premium Offers' />
+                    </div>
+                    <hr className='text-emerald-500 md:my-10 my-5' />
+                    <div>
+                        <h2 className="text-4xl md:text-[50px] font-[800] mb-6">Want total control and complete privacy?</h2>
+                        <p className="text-[20px] font-[400] md:mb-10 mb-7">You're in the right place, we don't sell your personal data.</p>
+                        <Button text='Start for free' />
+                    </div>
+                </div>
+                <div className="flex justify-center items-center z-100">
+                    <Image
+                        src="/images/globe.png"
+                        alt="Globe"
+                        width={600}
+                        height={600}
+                        className="max-w-full h-auto "
+                    />
+                </div>
+            </div>
+        </section>
+        {/* {Free Version End} */}
+
+        <Footer />
+      </div>
+    </main>
   );
 }
