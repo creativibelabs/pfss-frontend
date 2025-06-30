@@ -10,7 +10,7 @@ interface UserCardProps {
 
 const UserCard = ({ name, avatar, rating, comment }: UserCardProps) => {
   return (
-    <div className="bg-emerald-900/40 rounded-2xl p-6 border border-emerald-800 backdrop-blur-sm" style={{ backgroundImage: "url('/images/noise-texture.png')" }}>
+    <div className="bg-emerald-900/40 rounded-2xl p-6 border border-[#43E1A9] backdrop-blur-sm" style={{ backgroundImage: "url('/images/noise-texture.png')" }}>
       <div className="space-y-13">
         <div className="relative">
           <span className="absolute -top-3 left-0 text-emerald-400 text-4xl font-bold">“</span>

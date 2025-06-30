@@ -54,23 +54,23 @@ export default async function LandingPage() {
                 <Image
                     src="/images/storage.png"
                     alt="Storage"
-                    width={250}
+                    width={300}
                     height={170}
                     className="rotate-[0deg]"
                 />
             </div>
-            <div className="absolute bottom-30 right-40 z-10">
+            <div className="site_banner_img_right">
                 <Image
                     src="/images/usage.png"
                     alt="Usage"
-                    width={180}
+                    width={200}
                     height={180}
-                    className="-rotate-[6deg]  md:block"
+                    className="md:block"
                 />
             </div>
 
             {/* Main Content */}
-            <div className="relative z-20 text-white text-center px-6 max-w-5xl w-full">
+            <div className="relative z-20 text-white text-center px-6 w-full">
                 <h1 className="site_banner_title text-4xl md:text-[82px] font-[700] mb-6 leading-tight"> 
                     Your Private Cloud.<br />
                     <span className="text-4xl md:text-[82px] font-extrabold mb-6 leading-tight">Secure, Simple, Yours.</span>
@@ -79,15 +79,16 @@ export default async function LandingPage() {
                 {/* Subtitles with Framed Icons */}
                 <div className="text-lg  md:text-xl mb-10 ">
                     {/* Subtitle 1 */}
-                    <div className="flex justify-center items-center gap-3 flex-wrap">
-                        <span className="text-sm md:text-3xl">Securely upload, share, and manage your files</span>
+                    <div className="flex justify-center items-center flex-wrap gap-2">
+                        <span className="text-sm md:text-3xl font-medium">Securely upload, share, and manage your files</span>
                         <div
                             className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
                             style={{ backgroundImage: "url('/images/icons/frame.png')" }}
                         >
-                            <Image src="/images/icons/file.png" alt="File Icon" width={24} height={24} />
-                            <span className="text-sm md:text-3xl">with</span>
+                            <Image src="/images/icons/file.png" alt="File Icon" width={24} height={24} className="" />
+                           
                         </div>
+                         <span className="text-sm md:text-3xl">with</span>
                     </div>
 
                     {/* Subtitle 2 */}
@@ -98,7 +99,7 @@ export default async function LandingPage() {
                         >
                             <Image src="/images/icons/lock.png" alt="Lock Icon" width={60} height={60} />
                         </div>
-                        <span className="text-sm md:text-2xl ">No privacy compromise and seamless sync to your preferred device.</span>
+                        <span className="text-sm md:text-3xl font-medium">No privacy compromise and seamless sync to your preferred device.</span>
                     </div>
                 </div>
 
@@ -197,25 +198,25 @@ export default async function LandingPage() {
         {/* {Features Section End} */}
 
         {/* {Get Started, Testimonials Section Start} */}
-        <section className="relative py-10 overflow-hidden">
+        <section className="relative py-10 overflow-hidden0">
           <div className="relative z-10 container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h3 className="text-3xl md:text-[64px] font-bold md:mb-3 text-white">
+            <div className="text-center mx-auto mb-5">
+              <h3 className="site_started_title text-3xl md:text-[64px] font-extrabold md:mb-3 text-white">
                 Get Started in Minutes
               </h3>
-              <p className="text-md md:text-[30px] font-[400] text-gray-200">
-                <span className="block md:inline">Secure your data in minutes with seamless upload,</span>{" "}
-                <span className="block">-management, and instant access.</span>
+              <p className="site_started_subtitle text-md md:text-[30px] font-medium text-white">
+                <span className="block md:inline">Upload, Manage, And Access Your Files Instantly—With Built-In ,</span>{" "}
+                <span className="block">Privacy And Effortless Control.</span>
               </p>
             </div>
             <StepsCard />
           </div>
-          <div className="relative z-10 container mx-auto px-4 md:px-6 mt-20 md:mt-40">
-            <div className="text-center max-w-5xl mx-auto md:mt-16 mt-4">
-              <h3 className="text-3xl md:text-[64px] font-bold mb-2 mt-10 text-white">
-                See Why Users Choose Us
+          <div className="relative z-10 container mx-auto px-4 md:px-6 mt-10 md:mt-30 mb-20">
+            <div className="text-center max-w-5xl mx-auto mb-10">
+              <h3 className="text-3xl md:text-[64px] font-bold mb-2  text-[#b0b0b0] text">
+                Why Users Choose Us
               </h3>
-              <p className="text-lg md:text-[30px] font-[400] text-gray-200 w-full mx-auto">
+              <p className="text-lg md:text-[30px] font-[400] text-[#b0b0b0] w-full mx-auto">
                 Hear from individuals and teams who trust us to protect what matters most.
               </p>
             </div>
