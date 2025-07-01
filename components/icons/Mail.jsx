@@ -1,7 +1,7 @@
 import * as React from "react";
 const Mail = (props) => (
   <svg
-    width={12}
+    width={13}
     height={13}
     viewBox="0 0 12 13"
     fill="none"

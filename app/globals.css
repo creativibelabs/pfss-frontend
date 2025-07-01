@@ -199,7 +199,75 @@ body {
 .site_polygon_icon_right
 {
     position: absolute;
-    right: -20px;
+    right: -15px;
     bottom: -10px;
     z-index: -1;
+}
+
+.site_free_version_wrap::before
+{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    /* z-index: 1; */
+    width: 183px;
+    height: 100%;
+    background-image: url(/images/ellipse-left.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.site_free_version_wrap::after
+{
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    /* z-index: 1; */
+    width: 183px;
+    height: 100%;
+    background-image: url(/images/ellipse-right.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.site_footer_inner::before
+{
+    content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/noise-texture.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5; /* optional */
+  z-index: -1;  /* place behind content */
+}
+
+.custom-gradient-border {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('/images/noise-texture.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  border-radius: 50px;
+}
+
+.custom-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+    background: linear-gradient(120deg, #43E1A9, rgb(255 255 255 / 90%));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
 }

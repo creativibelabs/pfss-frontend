@@ -73,13 +73,13 @@ export default async function LandingPage() {
             <div className="relative z-20 text-white text-center px-6 w-full">
                 <h1 className="site_banner_title text-4xl md:text-[82px] font-[700] mb-6 leading-tight"> 
                     Your Private Cloud.<br />
-                    <span className="text-4xl md:text-[82px] font-extrabold mb-6 leading-tight">Secure, Simple, Yours.</span>
+                    <span className="text-4xl md:text-[82px] font-[700] mb-6 leading-tight">Secure, Simple, Yours.</span>
                 </h1>
 
                 {/* Subtitles with Framed Icons */}
                 <div className="text-lg  md:text-xl mb-10 ">
                     {/* Subtitle 1 */}
-                    <div className="flex justify-center items-center flex-wrap gap-2">
+                    <div className="flex justify-center items-center flex-wrap gap-2 -mb-[10px]">
                         <span className="text-sm md:text-3xl font-medium">Securely upload, share, and manage your files</span>
                         <div
                             className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
@@ -88,16 +88,14 @@ export default async function LandingPage() {
                             <Image src="/images/icons/file.png" alt="File Icon" width={24} height={24} className="" />
                            
                         </div>
-                         <span className="text-sm md:text-3xl">with</span>
+                         <span className="text-sm md:text-3xl font-medium">with</span>
                     </div>
 
                     {/* Subtitle 2 */}
                     <div className="flex justify-center items-center flex-wrap">
                         <div
-                            className="w-12 h-12 bg-center bg-contain bg-no-repeat flex items-center justify-center"
-                            style={{ backgroundImage: "url('/images/icons/frame.png')" }}
-                        >
-                            <Image src="/images/icons/lock.png" alt="Lock Icon" width={60} height={60} />
+                            className="w-13 h-13 bg-center bg-contain bg-no-repeat flex items-center justify-center">
+                            <Image src="/images/icons/lock-left.png" alt="Lock Icon" width={60} height={60} />
                         </div>
                         <span className="text-sm md:text-3xl font-medium">No privacy compromise and seamless sync to your preferred device.</span>
                     </div>
@@ -226,18 +224,18 @@ export default async function LandingPage() {
         {/* {Get Started, Testimonials Section End} */}
 
         {/* {Free Version Start} */}
-        <section className='bg-no-repeat bg-center mb-15'>
+        <section className='site_free_version_wrap bg-no-repeat bg-center mb-15 relative'>
             <div className="p-7 md:p-8 rounded-xl shadow-2xl bg-emerald-600/10 border border-emerald-500/70 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 relative overflow-hidden" style={{ backgroundImage: "url('/images/noise-texture.png')" }}>
                 <div className="space-y-5">
                     <div>
                         <h2 className="text-4xl md:text-[50px] font-[800] mb-4">Love the free version?</h2>
-                        <p className="text-[20px] font-[400] md:mb-10 mb-7">You'll love Premium even more. More features. More freedom.</p>
+                        <p className="text-[20px] font-[400] md:mb-10 mb-7 text-[#FDFFFF]">You'll love Premium even more. More features. More freedom.</p>
                         <Button text='See What Premium Offers' />
                     </div>
                     <hr className='text-emerald-500 md:my-10 my-5' />
                     <div>
                         <h2 className="text-4xl md:text-[50px] font-[800] mb-6">Want total control and complete privacy?</h2>
-                        <p className="text-[20px] font-[400] md:mb-10 mb-7">You're in the right place, we don't sell your personal data.</p>
+                        <p className="text-[20px] font-[400] md:mb-10 mb-7 text-[#FDFFFF]">You're in the right place, we don't sell your personal data.</p>
                         <Button text='Start for free' />
                     </div>
                 </div>
