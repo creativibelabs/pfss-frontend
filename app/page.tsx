@@ -45,7 +45,7 @@ export default async function LandingPage() {
   return (
     <main style={{ backgroundImage: "url('/images/home-background.webp')" }} className="main-wrapper">
       <div className="wrapper">
-        <Header />
+        <Header /> 
 
         {/* {Hero Section} */}
         <section className="relative min-h-[650px] bg-center flex md:pt-0 pt-30 md:items-center justify-center" >
