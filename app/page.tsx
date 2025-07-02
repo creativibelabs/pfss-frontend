@@ -111,92 +111,71 @@ export default async function LandingPage() {
         {/* {Hero Section End} */}
 
         {/* {Features Section Start} */}
-        <section className=" px-4 text-white relative min-h-[400px] max-h-[650px] mt-40 md:mt-0">
-          <div className="text-center">
+        <section className=" px-4 text-white relative min-h-[400px] max-h-[650px] mt-40 md:mt-0 overflow-hidden">
+          <div className="text-center mb-20">
             <h2 className="text-4xl md:text-[64px] lg:text-[64px] font-bold w-full md:max-w-150 mx-auto">
               Powerful Features At Your Fingertips.
             </h2>
           </div>
-          <div className="relative mx-auto w-full max-w-3xl aspect-square">
-            <div className="relative w-full h-full">
-              <div className="absolute inset-0">
-                <Image
-                  src="/images/feature/circle-large.png"
-                  alt="Large circle"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-    
-              <div className="absolute  inset-[19%]">
-                <Image
-                  src="/images/feature/circle-medium.png"
-                  alt="Medium circle"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <div className="absolute md:top-95 top-40 inset-[30%]">
-                <Image
-                  src="/images/feature/circle-small.png"
-                  alt="Small circle"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-    
-              {/* Features positioned correctly */}
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon1.png"
-                top="23%"
-                left="55%"
-                customClass="feature-icon"
-              />
-    
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon2.png"
-                top="50%"
-                right="-5%"
-                customClass="feature-icon"
-              />
-    
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon3.png"
-                bottom="32%"
-                right="50%"
-                customClass="feature-icon"
-              />
-    
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon4.png"
-                bottom="45%"
-                right="17%"
-                customClass="feature-icon"
-              />
-    
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon5.png"
-                top="38%"
-                left="35%"
-                customClass="feature-icon"
-              />
-    
-              <FeatureIcon
-                imageSrc="/images/feature/FeatureIcon6.png"
-                top="50%"
-                left="7%"
-                customClass="feature-icon"
-              />
-            </div>
+          <div className="relative mx-auto w-full max-w-3xl">
+            
+
+              <div className="orbit-container">
+
+                
+                <div className="orbit orbit1">
+                  <div className="dot-wrapper" style={{ animationDelay: "-6s" }}>
+                    <div className="dot"><img decoding="async" src="/images/feature/FeatureIcon6.png"
+                        className="img-fluid" alt="React JavaScript Library" /></div>
+                  </div>
+                </div>
+
+
+                <div className="orbit orbit2">
+                  <div className="dot-wrapper" style={{ animationDelay: "0s"}}>
+                    <div className="dot" style={{ "--angle": "0deg" }}><img decoding="async"
+                        src="/images/feature/FeatureIcon4.png" className="img-fluid" alt="React JavaScript Library" />
+                    </div>
+                  </div>
+                  <div className="dot-wrapper" style={{ animationDelay: "-12s" }}>
+                    <div className="dot" style={{ "--angle": "180deg" }}><img decoding="async"
+                        src="/images/feature/FeatureIcon5.png" className="img-fluid" alt="React JavaScript Library" />
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div className="orbit orbit3">
+                  <div className="dot-wrapper" style={{ animationDelay: "-10s"}}>
+                    <div className="dot" style={{ "--angle": "0deg" }}><img decoding="async"
+                        src="/images/feature/FeatureIcon1.png" className="img-fluid" alt="React JavaScript Library" />
+                    </div>
+                  </div>
+                  <div className="dot-wrapper" style={{ animationDelay: "0s"}}>
+                    <div className="dot" style={{ "--angle": "120deg" }}><img decoding="async"
+                        src="/images/feature/FeatureIcon2.png" className="img-fluid" alt="React JavaScript Library" />
+                    </div>
+                  </div>
+                  <div className="dot-wrapper" style={{ animationDelay: "-20s"}}>
+                    <div className="dot" style={{ "--angle": "240deg" }}><img decoding="async"
+                        src="/images/feature/FeatureIcon3.png" className="img-fluid" alt="React JavaScript Library" />
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>              
+
+             
+           
           </div>
         </section>
         {/* {Features Section End} */}
 
         {/* {Get Started, Testimonials Section Start} */}
-        <section className="relative py-10 overflow-hidden0">
+        <section className="relative pt-20 pb-10 overflow-hidden0">
           <div className="relative z-10 container mx-auto px-4 md:px-6">
             <div className="text-center mx-auto mb-5">
               <h3 className="site_started_title text-3xl md:text-[64px] font-extrabold md:mb-3 text-white">

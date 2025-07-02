@@ -29,7 +29,7 @@ body {
 
 .main-wrapper {
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
   display: flex;
@@ -271,3 +271,70 @@ body {
   pointer-events: none;
   z-index: -1;
 }
+
+
+/* Animation start */
+
+
+ .orbit-container {
+      position: relative;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    margin-top: 600px;
+    }
+
+    .orbit {
+      position: absolute;
+      border: 1px solid #999999;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .orbit img
+    {
+    width:130px
+    }
+
+    .orbit1 { width: 500px; height: 500px; }
+    .orbit2 { width: 750px; height: 750px; }
+    .orbit3 { width: 1000px; height: 1000px; }
+
+    .dot-wrapper {
+ position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotate 24s linear infinite;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .dot {
+      width: 130px;
+      height: 130px;
+     
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Orbit 1 (radius 50px) - 3 dots */
+    .orbit1 .dot-wrapper { animation-duration: 15s; }
+    
+
+    /* Orbit 2 (radius 100px) - 2 dots */
+    .orbit2 .dot-wrapper { animation-duration: 25s; }
+
+
+    /* Orbit 3 (radius 150px) - 1 dot */
+    .orbit3 .dot-wrapper { animation-duration: 30s; }
+
+
+/* Animation end */
