@@ -133,12 +133,12 @@ export default async function LandingPage() {
 
                 <div className="orbit orbit2">
                   <div className="dot-wrapper" style={{ animationDelay: "0s"}}>
-                    <div className="dot" style={{ "--angle": "0deg" }}><img decoding="async"
+                    <div className="dot" style={{ "--angle": "0deg" } as React.CSSProperties}><img decoding="async"
                         src="/images/feature/FeatureIcon4.png" className="img-fluid" alt="React JavaScript Library" />
                     </div>
                   </div>
                   <div className="dot-wrapper" style={{ animationDelay: "-12s" }}>
-                    <div className="dot" style={{ "--angle": "180deg" }}><img decoding="async"
+                    <div className="dot" style={{ "--angle": "180deg" } as React.CSSProperties}><img decoding="async"
                         src="/images/feature/FeatureIcon5.png" className="img-fluid" alt="React JavaScript Library" />
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default async function LandingPage() {
 
                 <div className="orbit orbit3">
                   <div className="dot-wrapper" style={{ animationDelay: "-10s"}}>
-                    <div className="dot" style={{ "--angle": "0deg" }}><img decoding="async"
+                    <div className="dot" style={{ "--angle": "0deg" } as React.CSSProperties}><img decoding="async"
                         src="/images/feature/FeatureIcon1.png" className="img-fluid" alt="React JavaScript Library" />
                     </div>
                   </div>
@@ -159,7 +159,7 @@ export default async function LandingPage() {
                     </div>
                   </div>
                   <div className="dot-wrapper" style={{ animationDelay: "-20s"}}>
-                    <div className="dot" style={{ "--angle": "240deg" }}><img decoding="async"
+                    <div className="dot" style={{ "--angle": "240deg" } as React.CSSProperties}><img decoding="async"
                         src="/images/feature/FeatureIcon3.png" className="img-fluid" alt="React JavaScript Library" />
                     </div>
                   </div>
