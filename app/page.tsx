@@ -154,7 +154,7 @@ export default async function LandingPage() {
                     </div>
                   </div>
                   <div className="dot-wrapper" style={{ animationDelay: "0s"}}>
-                    <div className="dot" style={{ "--angle": "120deg" }}><img decoding="async"
+                    <div className="dot" style={{ "--angle": "120deg" } as React.CSSProperties}><img decoding="async"
                         src="/images/feature/FeatureIcon2.png" className="img-fluid" alt="React JavaScript Library" />
                     </div>
                   </div>
