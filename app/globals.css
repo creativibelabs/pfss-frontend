@@ -241,11 +241,10 @@ body {
   position: absolute;
   inset: 0;
   background-image: url('/images/noise-texture.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.5; /* optional */
-  z-index: -1;  /* place behind content */
+  background-size: contain;
+  opacity: 1;
+  z-index: -1;
+  background-color: #ffffff12;
 }
 
 .custom-gradient-border {
@@ -254,7 +253,7 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background-image: url('/images/noise-texture.png');
+  background-image: url('/images/btn-texture.png');
   background-size: cover;
   background-position: center;
   z-index: 0;
