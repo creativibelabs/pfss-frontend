@@ -41,8 +41,8 @@ export const navList = [
         path: "",
     },
     {
-        title: "Features",
-        path: "features",
+        title: "Home 2",
+        path: "home2",
     },
     {
         title: "Pricing",

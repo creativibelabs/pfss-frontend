@@ -37,7 +37,7 @@ export default function LanguageSelector() {
       <button
         onClick={() => setOpen(!open)}
         className="site_lang_switcher w-full flex items-center justify-between gap-3  px-4 py-2.5 text-sm text-white"
-        style={{ backgroundImage: "url('/images/noise-texture.png0')" }}
+        style={{ backgroundImage: "url('/images/noise-texture.png')" }}
       >
         <div className="site_lang_selected flex items-center gap-3">
           <Image

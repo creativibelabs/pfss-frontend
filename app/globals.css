@@ -34,6 +34,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .wrapper {
@@ -63,7 +66,7 @@ body {
     background-repeat: repeat;
     opacity: 1;
     z-index: -1;
-    background-color: #ffffff45;
+    background-color: #ffffff12;
     border-radius: 16px;
 }
 

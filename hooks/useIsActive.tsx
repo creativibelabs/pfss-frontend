@@ -8,7 +8,8 @@ export function useIsActive() {
   const isActive = (path: string) => {
     const normalizedPath = `/${path}`.replace(/\/+$/, "");
     const normalizedCurrent = pathname.replace(/\/+$/, "");
-    return normalizedCurrent === normalizedPath || normalizedCurrent.startsWith(normalizedPath + "/");
+    console.log( {normalizedCurrent, normalizedPath} );
+    return normalizedCurrent === normalizedPath;
   };
 
   return isActive;

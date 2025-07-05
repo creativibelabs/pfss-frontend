@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="relative bottom-0 left-0 right-0 z-50 container mx-auto py-10 bg-transparent">
       <section
         className="site_footer_inner rounded-2xl md:p-10 p-4 border border-emerald-800 backdrop-blur-sm relative overflow-hidden"
-        style={{ backgroundImage: "url('/images/noise-texture.png0')" }}
+        style={{ backgroundImage: "url('/images/noise-texture.png')" }}
       >
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_318px] gap-4">
           <section>
